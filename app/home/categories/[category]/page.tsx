@@ -4,6 +4,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { ROUTES } from '../../../utils/routes';
+import Recipe from '../components/recipe';
 
 export default function Category() {
   
@@ -32,6 +33,7 @@ export default function Category() {
         <button >Volver</button>
         </div>
         <p>Categoria de {categoryName}</p>
+        <Recipe/>
       </>
     )
   }
