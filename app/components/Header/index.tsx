@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 
 export default function Header() {
   return (
+    <div>
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color='transparent'>
         <Toolbar variant="dense" className='flex justify-center'>
@@ -15,5 +16,6 @@ export default function Header() {
         </Toolbar>
       </AppBar>
     </Box>
+    </div>
   );
 }
