@@ -15,37 +15,25 @@ const drawerWidth = 240;
 
 export default function Sidebar() {
 
-  
+
   const [categories, setCategories] = useState(['Desayuno', 'Pastas', 'Guarniciones', 'Entradas'])
   return (
-    <Box sx={{ display: 'flex' }}>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="permanent"
-        anchor="left"
-      >
-        <Typography variant="h6" noWrap component="div">
-            CATEGORIAS
-        </Typography>
-        <List>
-          {categories.map((name, index) => (
-            <ListItem key={index} disablePadding>
-              <ListItemButton>
-                <Link href={`/home/categories/${name}`}>{name}</Link>
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
+    <div className='shadow-lg h-screen px-5 py-2'>
 
-      </Drawer>
+      <Typography variant="h6" noWrap component="div">
+        CATEGORIAS
+      </Typography>
+      <List>
+        {categories.map((name, index) => (
+          <ListItem key={index} disablePadding>
+            <ListItemButton>
+              <Link href={`/home/categories/${name}`}>{name}</Link>
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
 
-    </Box>
+
+    </div>
   );
 }
