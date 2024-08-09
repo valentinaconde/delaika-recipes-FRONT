@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import { ROUTES } from '../../../utils/routes';
 
 export default function Category() {
   
@@ -13,7 +14,7 @@ export default function Category() {
  
 
   const handleGoBack = () => {
-    router.back();
+    router.push(ROUTES.home);
   }
   
   const handleGetCategoryName = () => {

@@ -1,20 +1,17 @@
 'use client'
 import * as React from 'react';
 import { useState } from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import Link from 'next/link';
-
-const drawerWidth = 240;
-
+import { usePathname } from 'next/navigation';
+import style from './sidebar.module.css';
+import { ROUTES } from '../../utils/routes';
 export default function Sidebar() {
 
+  const pathName = usePathname()
 
   const [categories, setCategories] = useState(['Desayuno', 'Pastas', 'Guarniciones', 'Entradas'])
   return (
@@ -27,7 +24,7 @@ export default function Sidebar() {
         {categories.map((name, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton>
-              <Link href={`/home/categories/${name}`}>{name}</Link>
+              <Link href={ROUTES.category(name)} className={(pathName == ROUTES.category(name) ? style.active : "")} >{name}</Link>
             </ListItemButton>
           </ListItem>
         ))}
