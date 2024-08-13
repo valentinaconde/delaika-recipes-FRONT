@@ -1,6 +1,6 @@
 export const ROUTES = {
     home: '/home',
     categories: '/home/categories',
-    category: (categoryName: string) => `/home/categories/${categoryName}`,
+    category: (categoryId: number) => `/home/categories/${categoryId}`,
     recipe: (categoryName: string, recipeName: string) => `/home/categories/${categoryName}/${recipeName}`
 }
