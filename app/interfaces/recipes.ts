@@ -1,4 +1,4 @@
-interface Recipes {
+export interface Recipes {
     id: number;
     name: string;
     categoryId: number;
@@ -7,7 +7,7 @@ interface Recipes {
     ingredients: Ingredient[];
 }
 
-interface Ingredient {
+export interface Ingredient {
     name: string;
     quantity: number;
 }
