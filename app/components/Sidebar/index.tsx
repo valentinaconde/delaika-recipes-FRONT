@@ -28,18 +28,16 @@ export default function Sidebar() {
   return (
     <div className='shadow-lg h-screen px-5 py-2'>
 
-      <Typography variant="h6" noWrap component="div">
+      <p className='text-lg pt-4'>
         CATEGORIAS
-      </Typography>
-      <List>
+      </p>
+      <ul className='pt-3'>
         {categories?.map((category, index) => (
-          <ListItem key={index} disablePadding>
-            <ListItemButton>
-              <Link href={ROUTES.category(category.id)} className={(pathName == ROUTES.category(category.id) ? style.active : "")} >{category.name}</Link>
-            </ListItemButton>
-          </ListItem>
+          <li className='pb-2 hover:bg-slate-50' >
+              <Link href={ROUTES.category(category.id)} className={`text-sm text-left  ${(pathName == ROUTES.category(category.id) ? style.active : "")}`} >{category.name}</Link>
+          </li>
         ))}
-      </List>
+      </ul>
 
 
     </div>
