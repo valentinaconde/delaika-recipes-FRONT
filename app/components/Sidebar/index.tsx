@@ -33,7 +33,7 @@ export default function Sidebar() {
       </p>
       <ul className='pt-3'>
         {categories?.map((category, index) => (
-          <li className='pb-2 hover:bg-slate-50' >
+          <li className='pb-2 hover:bg-slate-50' key={category.id} >
               <Link href={ROUTES.category(category.id)} className={`text-sm text-left  ${(pathName == ROUTES.category(category.id) ? style.active : "")}`} >{category.name}</Link>
           </li>
         ))}
