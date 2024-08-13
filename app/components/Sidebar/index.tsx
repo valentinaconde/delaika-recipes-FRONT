@@ -26,20 +26,18 @@ export default function Sidebar() {
   }, [])
   
   return (
-    <div className='shadow-lg h-screen px-5 py-2'>
+    <div className=' border-r-2 h-screen px-5 my-9 w-60 flex flex-col   '>
 
-      <Typography variant="h6" noWrap component="div">
+      <p className='text-lg pt-4'>
         CATEGORIAS
-      </Typography>
-      <List>
+      </p>
+      <ul className='pt-3'>
         {categories?.map((category, index) => (
-          <ListItem key={index} disablePadding>
-            <ListItemButton>
-              <Link href={ROUTES.category(category.id)} className={(pathName == ROUTES.category(category.id) ? style.active : "")} >{category.name}</Link>
-            </ListItemButton>
-          </ListItem>
+          <li className='pb-2 hover:bg-slate-50' key={category.id} >
+              <Link href={ROUTES.category(category.id)} className={`text-sm   ${(pathName == ROUTES.category(category.id) ? style.active : "")}`} >{(category.name).toLocaleUpperCase()}</Link>
+          </li>
         ))}
-      </List>
+      </ul>
 
 
     </div>

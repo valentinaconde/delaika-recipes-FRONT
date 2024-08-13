@@ -1,21 +1,12 @@
+import { ROUTES } from '@/app/utils/routes';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 
 export default function Header() {
   return (
-    <div>
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color='transparent'>
-        <Toolbar variant="dense" className='flex justify-center'>
-          <Typography variant="h6" color="inherit" component="div">
-            DELAIKA
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <div className='flex justify-center align-middle h-20 w-screen bg-slate-100'>
+      <Link className='self-center text-lg' href={ROUTES.home} >DELAIKA</Link>
     </div>
   );
 }

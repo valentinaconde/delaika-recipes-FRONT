@@ -9,5 +9,5 @@ export interface Recipes {
 
 export interface Ingredient {
     name: string;
-    quantity: number;
+    quantity: string;
 }
