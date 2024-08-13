@@ -8,12 +8,12 @@
         "description": "Description 1",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Huevos",
+            "quantity": "2"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Azucar",
+            "quantity": "100 gr"
             }
         ]
         },
@@ -25,12 +25,12 @@
         "description": "Description 2",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Chocolate",
+            "quantity": "100gr"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Huevos",
+            "quantity": "2"
             }
         ]
         },
@@ -42,12 +42,12 @@
         "description": "Description 3",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Limones",
+            "quantity": "3"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Leche",
+            "quantity": "100ml"
             }
         ]
         },
@@ -59,12 +59,12 @@
         "description": "Description 4",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Palta",
+            "quantity": "1"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Tomate picado",
+            "quantity": "1/2"
             }
         ]
         },
@@ -76,12 +76,12 @@
         "description": "Description 5",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Arroz",
+            "quantity": "100gr"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Salmón",
+            "quantity": "200gr"
             }
         ]
         },
@@ -93,12 +93,12 @@
         "description": "Description 6",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Masa de tacos",
+            "quantity": "4"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Carne",
+            "quantity": "200gr"
             }
         ]
         },
@@ -110,12 +110,12 @@
         "description": "Description 7",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Lechuga",
+            "quantity": "100gr"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Tomate",
+            "quantity": "2"
             }
         ]
         }
@@ -128,12 +128,16 @@
         "description": "Description 8",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Huevos",
+            "quantity": "5"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Leche",
+            "quantity": "500ml"
+            },
+            {
+            "name": "Azucar",
+            "quantity": "200gr"
             }
         ]
         }
@@ -146,12 +150,12 @@
         "description": "Description 9",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Leche",
+            "quantity": "300ml"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Azucar",
+            "quantity": "200gr"
             }
         ]
         }
@@ -164,12 +168,12 @@
         "description": "Description 10",
         "ingredients": [
             {
-            "name": "Ingredient 1",
-            "quantity": 1
+            "name": "Chocolate en barra",
+            "quantity": "200gr"
             },
             {
-            "name": "Ingredient 2",
-            "quantity": 2
+            "name": "Leche",
+            "quantity": "200ml"
             }
         ]
         }
