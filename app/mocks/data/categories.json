@@ -1,0 +1,20 @@
+{
+    "categories": [
+        {
+        "id": 1,
+        "name": "Tortas"
+        },
+        {
+        "id": 2,
+        "name": "Entradas"
+        },
+        {
+        "id": 3,
+        "name": "Comidas rapidas"
+        },
+        {
+        "id": 4,
+        "name": "Postres"
+        }
+    ]
+}
