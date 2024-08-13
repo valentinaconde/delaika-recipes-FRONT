@@ -35,7 +35,7 @@ export default function Sidebar() {
         {categories?.map((category, index) => (
           <ListItem key={index} disablePadding>
             <ListItemButton>
-              <Link href={ROUTES.category(category.id)} className={(pathName == ROUTES.category(category.name) ? style.active : "")} >{category.name}</Link>
+              <Link href={ROUTES.category(category.id)} className={(pathName == ROUTES.category(category.id) ? style.active : "")} >{category.name}</Link>
             </ListItemButton>
           </ListItem>
         ))}
