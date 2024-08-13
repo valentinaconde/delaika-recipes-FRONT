@@ -58,7 +58,7 @@ export default function Category() {
       <div className='flex'>
         {
           recipes?.map((recipe, index) => (
-            <Link href={ROUTES.recipe(categoryName, recipe.name)} key={index} className='me-3'>
+            <Link href={ROUTES.recipe(categoryId, recipe.id)} key={index} className='me-3'>
               <RecipeCard name={recipe.name} url={recipe.imageUrl} />
             </Link>
           ))
