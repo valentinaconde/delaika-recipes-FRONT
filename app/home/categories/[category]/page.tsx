@@ -48,10 +48,10 @@ export default function Category() {
 
   return (
     <div className='p-3'>
-      <div className='flex pb-4'>
-        <Link href={ROUTES.home} >RECETAS</Link>
+      <div className='flex pb-4 text-sm '>
+        <Link href={ROUTES.home} className='hover:underline'>RECETAS</Link>
         <p className='px-2'>/</p>
-        <Link href={ROUTES.category(categoryId)} >{categoryName.toLocaleUpperCase()}</Link>
+        <Link className='hover:underline' href={ROUTES.category(categoryId)} >{categoryName.toLocaleUpperCase()}</Link>
       </div>
 
 
