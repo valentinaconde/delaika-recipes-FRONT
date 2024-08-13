@@ -26,7 +26,7 @@ export default function Sidebar() {
   }, [])
   
   return (
-    <div className='shadow-lg h-screen px-5 py-2'>
+    <div className='shadow-lg h-screen px-5 py-2 w-48'>
 
       <p className='text-lg pt-4'>
         CATEGORIAS
@@ -34,7 +34,7 @@ export default function Sidebar() {
       <ul className='pt-3'>
         {categories?.map((category, index) => (
           <li className='pb-2 hover:bg-slate-50' key={category.id} >
-              <Link href={ROUTES.category(category.id)} className={`text-sm text-left  ${(pathName == ROUTES.category(category.id) ? style.active : "")}`} >{category.name}</Link>
+              <Link href={ROUTES.category(category.id)} className={`text-sm text-left  ${(pathName == ROUTES.category(category.id) ? style.active : "")}`} >{(category.name).toLocaleUpperCase()}</Link>
           </li>
         ))}
       </ul>
