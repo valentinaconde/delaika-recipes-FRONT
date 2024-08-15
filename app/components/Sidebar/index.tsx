@@ -26,7 +26,7 @@ export default function Sidebar() {
   }, [])
   
   return (
-    <div className=' border-r-2 h-screen px-5 my-9 w-60 flex flex-col   '>
+    <div className=' border-r-2 h-full px-5 my-9 w-60 flex flex-col   '>
 
       <p className='text-lg pt-4'>
         CATEGORIAS
