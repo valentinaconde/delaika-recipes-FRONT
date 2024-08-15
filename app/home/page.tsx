@@ -5,6 +5,7 @@ import { getRecipes } from "../services/dataMock.service";
 import Link from "next/link";
 import { ROUTES } from "../utils/routes";
 import RecipeCard from "./categories/components/recipeCard";
+import EmptyMessage from "../components/EmptyMessage";
 
 export default function Home() {
 
@@ -30,11 +31,13 @@ export default function Home() {
 
       <div className='flex flex-wrap'>
       {
+        recipes ?
           recipes?.map((recipe, index) => (
             <Link href={ROUTES.recipe(recipe.categoryId, recipe.id)} key={index} className='me-3 pb-3'>
               <RecipeCard name={recipe.name} url={recipe.imageUrl} />
             </Link>
           ))
+          : <EmptyMessage message='No hay recetas disponibles en este momento' />
         }
       </div>
     </div>
