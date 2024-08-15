@@ -2,12 +2,12 @@
 'use client'
 import { usePathname, useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
-import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { ROUTES } from '../../../utils/routes';
 import RecipeCard from '../components/recipeCard';
 import Link from 'next/link';
 import { getRecipesByCategory, getCategoryById } from '@/app/services/dataMock.service';
 import { Recipes } from '@/app/interfaces/recipes';
+import EmptyMessage from '@/app/components/EmptyMessage';
 
 export default function Category() {
 
@@ -54,18 +54,24 @@ export default function Category() {
         <Link className='hover:underline' href={ROUTES.category(categoryId)} >{categoryName.toLocaleUpperCase()}</Link>
       </div>
 
-
-      <div className='flex'>
-        {
-          recipes?.map((recipe, index) => (
-            <Link href={ROUTES.recipe(categoryId, recipe.id)} key={index} className='me-3'>
-              <RecipeCard name={recipe.name} url={recipe.imageUrl} />
-            </Link>
-          ))
-        }
-      </div>
+      {
+        recipes?.length ?
 
 
+
+          <div className='flex'>
+            {
+              recipes?.map((recipe, index) => (
+                <Link href={ROUTES.recipe(categoryId, recipe.id)} key={index} className='me-3'>
+                  <RecipeCard name={recipe.name} url={recipe.imageUrl} />
+                </Link>
+              ))
+            }
+          </div>
+
+
+          : <EmptyMessage message="No hay recetas disponibles en este momento" />
+      }
     </div>
   )
 }
