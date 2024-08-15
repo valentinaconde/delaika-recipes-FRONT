@@ -31,7 +31,7 @@ export default function Home() {
 
       <div className='flex flex-wrap'>
       {
-        recipes ?
+        recipes?.length ?
           recipes?.map((recipe, index) => (
             <Link href={ROUTES.recipe(recipe.categoryId, recipe.id)} key={index} className='me-3 pb-3'>
               <RecipeCard name={recipe.name} url={recipe.imageUrl} />
