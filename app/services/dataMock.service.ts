@@ -11,7 +11,7 @@ export function getCategoryById(categoryId: number) {
 
 
 export function getRecipes() {
-    return recipes
+    return recipes.recipes
 }
 
 export function getRecipesByCategory(categoryId: number) {
