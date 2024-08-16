@@ -1,18 +1,20 @@
 
 'use client'
 import { usePathname, useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ROUTES } from '../../../utils/routes';
 import RecipeCard from '../components/recipeCard';
 import Link from 'next/link';
 import { getRecipesByCategory, getCategoryById } from '@/app/services/dataMock.service';
 import { Recipes } from '@/app/interfaces/recipes';
 import EmptyMessage from '@/app/components/EmptyMessage';
+import { LoadingContext } from '@/app/context/LoadingContext';
 
 export default function Category() {
 
   const path = usePathname()
   const router = useRouter();
+  const { handleSetLoading } = useContext(LoadingContext)
   const [categoryId, setCategoryId] = useState(0)
   const [categoryName, setCategoryName] = useState('')
   const [recipes, setRecipes] = useState<Recipes[]>()
@@ -33,11 +35,14 @@ export default function Category() {
   const getRecipes = () => {
     const recipes = getRecipesByCategory(Number(categoryId));
     setRecipes(recipes)
+    handleSetLoading(false)
+
 
   }
 
 
   useEffect(() => {
+    handleSetLoading(true)
     handleGetCategoryId();
   }, [])
 
