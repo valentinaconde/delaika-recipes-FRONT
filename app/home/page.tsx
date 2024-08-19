@@ -29,11 +29,11 @@ export default function Home() {
         <Link href={ROUTES.home} className='hover:underline'>RECETAS</Link>
       </div>
 
-      <div className='flex flex-wrap'>
+      <div className='grid grid-cols-2 gap-4 md:flex md:flex-wrap'>
       {
         recipes?.length ?
           recipes?.map((recipe, index) => (
-            <Link href={ROUTES.recipe(recipe.categoryId, recipe.id)} key={index} className='me-3 pb-3'>
+            <Link href={ROUTES.recipe(recipe.categoryId, recipe.id)} key={index} className='md:me-3 md:pb-3'>
               <RecipeCard name={recipe.name} url={recipe.imageUrl} />
             </Link>
           ))
