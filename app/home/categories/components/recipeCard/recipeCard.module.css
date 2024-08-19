@@ -28,3 +28,19 @@
     margin: 0;
     font-size: 14px;
 }
+
+
+@media (max-width: 768px) {
+    .recipeCard {
+        width: 120px;
+        height: 120px;
+    }
+    .overlay h2 {
+        margin: 0;
+        font-size: 10px;
+    }
+    .overlay {
+        padding: 5px 0;
+    
+    }
+}

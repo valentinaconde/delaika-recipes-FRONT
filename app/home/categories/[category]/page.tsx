@@ -52,31 +52,26 @@ export default function Category() {
   }, [categoryId])
 
   return (
-    <div className='p-3'>
+    <div className='md:p-3'>
       <div className='flex pb-4 text-sm '>
         <Link href={ROUTES.home} className='hover:underline'>RECETAS</Link>
         <p className='px-2'>/</p>
         <Link className='hover:underline' href={ROUTES.category(categoryId)} >{categoryName.toLocaleUpperCase()}</Link>
       </div>
 
+      <div className='flex flex-wrap'>
       {
         recipes?.length ?
+          recipes?.map((recipe, index) => (
+            <Link href={ROUTES.recipe(recipe.categoryId, recipe.id)} key={index} className='me-3 pb-3'>
+              <RecipeCard name={recipe.name} url={recipe.imageUrl} />
+            </Link>
+          ))
+          : <EmptyMessage message='No hay recetas disponibles en este momento' />
+        }
+      </div>
 
-
-
-          <div className='flex'>
-            {
-              recipes?.map((recipe, index) => (
-                <Link href={ROUTES.recipe(categoryId, recipe.id)} key={index} className='me-3'>
-                  <RecipeCard name={recipe.name} url={recipe.imageUrl} />
-                </Link>
-              ))
-            }
-          </div>
-
-
-          : <EmptyMessage message="No hay recetas disponibles en este momento" />
-      }
+  
     </div>
   )
 }
