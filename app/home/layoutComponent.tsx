@@ -7,7 +7,7 @@ import { LoadingContext } from "../context/LoadingContext"
 
 export default function LayoutComponent({ children }: { children: React.ReactNode }) {
   const { loading } = useContext(LoadingContext)
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery('(max-width:768px)');
 
 
   return (
@@ -20,7 +20,7 @@ export default function LayoutComponent({ children }: { children: React.ReactNod
             <div className='w-full h-full d-flex items-center justify-center'>
               <CircularProgress />
             </div>
-            : <div className="p-5">{children}</div>
+            : <div className="p-3 md:p-5">{children}</div>
         }
       </div>
     </div>

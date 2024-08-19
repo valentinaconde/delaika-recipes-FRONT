@@ -19,7 +19,7 @@ export default function Sidebar() {
   const pathName = usePathname();
   const [categories, setCategories] = useState<Category[]>();
   const [menuOpen, setMenuOpen] = useState(false);
-  const isMobile = useMediaQuery('(max-width:600px)');
+  const isMobile = useMediaQuery('(max-width:768px)');
 
   useEffect(() => {
     const categories = getCategories();
