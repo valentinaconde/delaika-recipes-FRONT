@@ -24,7 +24,7 @@ export default function Home() {
 
 
   return (
-    <div className='p-3'>
+    <div className='md:p-3'>
       <div className='flex pb-4 text-sm '>
         <Link href={ROUTES.home} className='hover:underline'>RECETAS</Link>
       </div>

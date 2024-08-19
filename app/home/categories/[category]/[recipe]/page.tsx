@@ -46,7 +46,7 @@ export default function Recipe() {
 
 
   return (
-    <div className='p-3'>
+    <div className='md:p-3'>
         <div className='flex pb-4 text-sm'>
         <Link href={ROUTES.home} >RECETAS</Link>
         <p className='px-2'>/</p>
