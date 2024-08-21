@@ -6,6 +6,8 @@ import {
   Field,
 } from 'formik';
 import { SignupSchema } from './schema';
+import { useRouter } from 'next/navigation';
+import { ROUTES } from '@/app/utils/routes';
 
 interface MyFormValues {
   email: string;
@@ -13,6 +15,7 @@ interface MyFormValues {
 }
 
 export default function Login() {
+  const router = useRouter();
   const initialValues: MyFormValues = { email: '', password: '' };
   return (
     <div className='flex flex-col items-center mt-5'>
@@ -23,6 +26,7 @@ export default function Login() {
           console.log({ values, actions });
           alert(JSON.stringify(values, null, 2));
           actions.setSubmitting(false);
+          router.push(ROUTES.admin);
         }}
         validationSchema={SignupSchema}
       >
