@@ -39,7 +39,7 @@ export default function Login() {
               {errors.email && touched.email ? (<div className='text-red-500 text-sm text-end'>{errors.email}</div>) : null}
             </div>
             <div className='h-20 '>
-              <Field type="password" id="password" name="password" placeholder="Contraseña" className={`w-96 self-center  p-2 border rounded-md ${(errors.email && touched.email ? ' border-rose-500' : "")}`} />
+              <Field type="password" id="password" name="password" placeholder="Contraseña" className={`w-96 self-center  p-2 border rounded-md ${(errors.password && touched.password ? ' border-rose-500' : "")}`} />
               {errors.password && touched.password ? (<div className='text-red-500 text-sm text-end'>{errors.password}</div>) : null}
             </div>
 
