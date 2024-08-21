@@ -5,6 +5,7 @@ import {
   Form,
   Field,
 } from 'formik';
+import { SignupSchema } from './schema';
 
 interface MyFormValues {
   email: string;
@@ -23,12 +24,17 @@ export default function Login() {
           alert(JSON.stringify(values, null, 2));
           actions.setSubmitting(false);
         }}
+        validationSchema={SignupSchema}
       >
-        <Form className='flex flex-col items-center mt-5'>
-          <Field id="email" name="email" placeholder="Email"  className="w-96 self-center mb-2 p-2 border-2"/>
-          <Field id="password" name="password" placeholder="Password"  className="w-96 self-center mb-2 p-2 border-2"/>
-          <button type="submit" className="w-96 bg-neutral-200 p-2">Submit</button>
-        </Form>
+        {({ errors, touched }) => (
+          <Form className='flex flex-col items-center mt-5'>
+            <Field id="email" name="email" placeholder="Email" className="w-96 self-center  p-2 border-2" />
+            {errors.email && touched.email ? (<div className='text-red-500 mb-2'>{errors.email}</div>) : null}
+            <Field id="password" name="password" placeholder="Password" className="w-96 self-center  p-2 border-2" />
+            {errors.password && touched.password ? (<div className='text-red-500 mb-2'>{errors.password}</div>) : null}
+            <button type="submit" className="w-96 bg-neutral-200 p-2 mt-3">Submit</button>
+          </Form>
+        )}
       </Formik>
     </div>
   );
