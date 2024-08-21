@@ -9,7 +9,7 @@ import { SignupSchema } from './schema';
 
 interface MyFormValues {
   email: string;
-  password: any;
+  password: string;
 }
 
 export default function Login() {
