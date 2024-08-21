@@ -1,6 +1,5 @@
 import { ROUTES } from '@/app/utils/routes';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import * as React from 'react';
 import style from './header.module.css';
 

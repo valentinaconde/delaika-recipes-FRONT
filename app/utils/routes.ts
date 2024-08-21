@@ -5,4 +5,7 @@ export const ROUTES = {
     recipe: (categoryId: number, recipeId: number) => `/home/categories/${categoryId}/${recipeId}`,
     admin: '/backoffice/admin',
     login: '/backoffice/login',
+    configuration: '/backoffice/admin/configuration',
+    categoriesAdmin: '/backoffice/admin/categories',
+    recipesAdmin: '/backoffice/admin/recipes',
 }
