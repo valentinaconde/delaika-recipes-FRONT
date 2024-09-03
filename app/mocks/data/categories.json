@@ -2,23 +2,28 @@
     "categories": [
         {
         "id": 1,
-        "name": "Tortas"
+        "name": "Tortas",
+        "hide": false
         },
         {
         "id": 2,
-        "name": "Entradas"
+        "name": "Entradas",
+        "hide": false
         },
         {
         "id": 3,
-        "name": "Comidas rapidas"
+        "name": "Comidas rapidas",
+        "hide": false
         },
         {
         "id": 4,
-        "name": "Postres"
+        "name": "Postres",
+        "hide": true
         },
         {
         "id": 5,
-        "name": "Bebidas"
+        "name": "Bebidas",
+        "hide": false
         }
     ]
 }
