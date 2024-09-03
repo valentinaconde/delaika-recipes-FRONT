@@ -36,11 +36,11 @@ export default function Login() {
           <Form className='flex flex-col items-center mt-5 px-8 py-12 border-2 rounded-md'>
             <div className='h-20 '>
               <Field id="email" name="email" placeholder="Correo electrónico" className={`w-96 self-center p-2 border rounded-md ${(errors.email && touched.email ? ' border-rose-500' : "")}`} />
-              {errors.email && touched.email ? (<div className='text-red-500 text-sm text-end'>{errors.email}</div>) : null}
+              {errors.email && touched.email ? (<div className='text-red-800 text-sm text-end'>{errors.email}</div>) : null}
             </div>
             <div className='h-20 '>
               <Field type="password" id="password" name="password" placeholder="Contraseña" className={`w-96 self-center  p-2 border rounded-md ${(errors.password && touched.password ? ' border-rose-500' : "")}`} />
-              {errors.password && touched.password ? (<div className='text-red-500 text-sm text-end'>{errors.password}</div>) : null}
+              {errors.password && touched.password ? (<div className='text-red-800 text-sm text-end'>{errors.password}</div>) : null}
             </div>
 
             <button type="submit" className="w-96 bg-neutral-200 p-2 mt-3 rounded-md">Iniciar sesión</button>
