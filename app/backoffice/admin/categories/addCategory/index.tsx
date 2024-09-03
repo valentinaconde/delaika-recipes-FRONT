@@ -5,12 +5,12 @@ import {
 } from 'formik';
 
 interface MyFormValues {
-    nombre: string;
+    name: string;
 }
 
 export default function AddCategory() {
 
-    const initialValues: MyFormValues = { nombre: '' };
+    const initialValues: MyFormValues = { name: '' };
 
     return (
         <div className="flex flex-col">
