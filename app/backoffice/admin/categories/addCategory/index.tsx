@@ -1,29 +1,35 @@
+import { CategoriesContext } from '@/app/context/CategoriesContext';
+import { Category } from '@/app/interfaces/categories';
 import {
     Formik,
     Form,
     Field,
 } from 'formik';
+import { useContext } from 'react';
 
-interface MyFormValues {
-    name: string;
-}
 
 export default function AddCategory() {
 
-    const initialValues: MyFormValues = { name: '' };
+    const {handleAddCategory, categories} = useContext(CategoriesContext)
+
+    const initialValues: Category = { id:0, name: '', hide: false };
+
+    const handleSubmit = (category: Category) => {
+        const lastAddedCategory = categories[categories.length - 1];
+        category.id = lastAddedCategory.id + 1;
+        handleAddCategory(category)
+        localStorage.setItem('categories', JSON.stringify(categories))
+    }
 
     return (
         <div className="flex flex-col">
             <Formik
                 initialValues={initialValues}
-                onSubmit={(values, actions) => {
-                    console.log({ values, actions });
-                    alert(JSON.stringify(values, null, 2));
-                    actions.setSubmitting(false);
-
+                onSubmit={(values) => {
+                    handleSubmit(values)
                 }}
             >
-                <Form className='flex flex-col items-center mt-5 px-8 py-5 border-2 rounded-md'>
+                <Form className='flex flex-col items-center mt-2 px-8 py-5 border-2 rounded-md'>
                     <h1 className='pb-10'>Agregar categoría</h1>
                     <div className='h-20 '>
                         <Field id="name" name="name" placeholder="Nombre" className={`w-96 self-center p-2 border rounded-md`} />
