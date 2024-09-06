@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -13,8 +14,9 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Category } from '@/app/interfaces/categories';
 
 
-export default function ConfirmModal({ category, action}: { category: Category, action: string }) {
-    const [open, setOpen] = React.useState(false);
+export default function ConfirmModal({ category, action }: { category: Category, action: string }) {
+    const [open, setOpen] = useState(false);
+    const [modalText, setModalText] = useState('')
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -23,6 +25,22 @@ export default function ConfirmModal({ category, action}: { category: Category, 
     const handleClose = () => {
         setOpen(false);
     };
+    const handleSetModalText = () => {
+        action === 'delete' ?
+            setModalText('¿Está seguro que desea eliminar la categoria?')
+            :
+            (
+                category.hide ?
+                    setModalText('¿Está seguro que desea mostrar la categoria?')
+                    :
+                    setModalText('¿Está seguro que desea ocultar la categoria?')
+            )
+    }
+
+    useEffect(() => {
+        handleSetModalText()
+    }, [])
+
 
     return (
         <>
@@ -52,27 +70,11 @@ export default function ConfirmModal({ category, action}: { category: Category, 
                     },
                 }}
             >
-                <DialogTitle>Categoria: {category.name}</DialogTitle>     
-               <DialogContent>
-                    {
-                        action === 'delete' ?
-                            <DialogContentText>
-                                ¿Está seguro que desea eliminar la categoria? 
-                            </DialogContentText>
-                            :
-                            (
-                                category.hide ?
-                                    <DialogContentText>
-                                        ¿Está seguro que desea mostrar la categoria?
-                                    </DialogContentText>
-                                    :
-                                    <DialogContentText>
-                                        ¿Está seguro que desea ocultar la categoria?
-                                    </DialogContentText>
-
-                            )
-                           
-                    }
+                <DialogTitle>Categoria: {category.name}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        {modalText}
+                    </DialogContentText>
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} className='text-red-800'>Cancelar</Button>
@@ -83,7 +85,7 @@ export default function ConfirmModal({ category, action}: { category: Category, 
                             'Ocultar'}
                     </Button>
                 </DialogActions>
-            </Dialog>
+            </Dialog >
         </>
     );
 }
