@@ -25,7 +25,7 @@ export default function ConfirmModal({ category, action}: { category: Category, 
     };
 
     return (
-        <React.Fragment>
+        <>
             {
                 action === 'delete' ?
                     <button className="text-red-800 px-2 py-1" onClick={handleClickOpen}><DeleteIcon /></button>
@@ -84,6 +84,6 @@ export default function ConfirmModal({ category, action}: { category: Category, 
                     </Button>
                 </DialogActions>
             </Dialog>
-        </React.Fragment>
+        </>
     );
 }

@@ -20,7 +20,7 @@ export default function EditModal({id, name} : {id: number, name: string}) {
   };
 
   return (
-    <React.Fragment>
+    <>
       <EditIcon onClick={handleClickOpen} />
       <Dialog
         open={open}
@@ -60,6 +60,6 @@ export default function EditModal({id, name} : {id: number, name: string}) {
           <Button type="submit" className='text-cyan-600'>Guardar</Button>
         </DialogActions>
       </Dialog>
-    </React.Fragment>
+    </>
   );
 }
