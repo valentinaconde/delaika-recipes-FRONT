@@ -1,7 +1,7 @@
 'use client'
 import { useContext, useEffect, useState } from "react"
 
-import cat from '../../../../mocks/data/categories.json'
+// import cat from '../../../../mocks/data/categories.json'
 
 import EditModal from '../editModal'
 import ConfirmModal from '../confirmModal'
@@ -10,16 +10,14 @@ import { CategoriesContext } from "@/app/context/CategoriesContext"
 
 
 export default function Categories() {
-    useEffect(() => {
-        if(localStorage.getItem('categories')) {
-            cat.categories = JSON.parse(localStorage.getItem('categories') || '')
-        }
-        handleSetCategories(cat.categories)
-        localStorage.setItem('categories', JSON.stringify(cat.categories))
-    }, [])
+
 
     const { categories, handleSetCategories} = useContext(CategoriesContext)
 
+    useEffect(() => {
+        handleSetCategories(categories)
+    }, [])
+    
     return (
         <div className="flex flex-col">
             {

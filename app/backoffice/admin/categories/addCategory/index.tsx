@@ -18,7 +18,7 @@ export default function AddCategory() {
         const lastAddedCategory = categories[categories.length - 1];
         category.id = lastAddedCategory.id + 1;
         handleAddCategory(category)
-        localStorage.setItem('categories', JSON.stringify(categories))
+        
     }
 
     return (
