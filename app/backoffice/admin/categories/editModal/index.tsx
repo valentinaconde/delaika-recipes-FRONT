@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useContext , useState} from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
@@ -7,9 +8,11 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import EditIcon from '@mui/icons-material/Edit';
+import { CategoriesContext } from '@/app/context/CategoriesContext';
 
 export default function EditModal({id, name} : {id: number, name: string}) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const { handleEditCategory } = useContext(CategoriesContext);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -18,6 +21,12 @@ export default function EditModal({id, name} : {id: number, name: string}) {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const handleConfirm  = (formJson: any) => {
+    handleEditCategory(id, formJson.category);
+    setOpen(false);
+    
+  }
 
   return (
     <>
@@ -31,7 +40,7 @@ export default function EditModal({id, name} : {id: number, name: string}) {
             event.preventDefault();
             const formData = new FormData(event.currentTarget);
             const formJson = Object.fromEntries((formData as any).entries());
-            handleClose();
+            handleConfirm(formJson);
           },
         }}
       >

@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -13,12 +12,16 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Category } from '@/app/interfaces/categories';
 
+import { CategoriesContext } from '@/app/context/CategoriesContext';
+
 
 export default function ConfirmModal({ category, action }: { category: Category, action: string }) {
     const [open, setOpen] = useState(false);
     const [modalText, setModalText] = useState('')
+    const { handleDeleteCategory, handleHideCategory } = useContext(CategoriesContext)
 
     const handleClickOpen = () => {
+        handleSetModalText()
         setOpen(true);
     };
 
@@ -39,7 +42,16 @@ export default function ConfirmModal({ category, action }: { category: Category,
 
     useEffect(() => {
         handleSetModalText()
-    }, [])
+    }, [open])
+
+    const handleConfirm = () => {
+        if (action === 'delete') {
+            handleDeleteCategory(category.id)
+        } else {
+            handleHideCategory(category.id)
+        }
+        setOpen(false);
+    }
 
 
     return (
@@ -64,9 +76,7 @@ export default function ConfirmModal({ category, action }: { category: Category,
                     component: 'form',
                     onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
                         event.preventDefault();
-                        const formData = new FormData(event.currentTarget);
-                        const formJson = Object.fromEntries((formData as any).entries());
-                        handleClose();
+                        handleConfirm()
                     },
                 }}
             >
@@ -78,11 +88,16 @@ export default function ConfirmModal({ category, action }: { category: Category,
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose} className='text-red-800'>Cancelar</Button>
-                    <Button type="submit" className='text-cyan-600'>{
+                    <Button type="submit" className='text-cyan-600' >{
                         action === 'delete' ?
                             'Eliminar'
                             :
-                            'Ocultar'}
+                            (
+                                category.hide ?
+                                'Mostrar'
+                                : 'Ocultar'
+                            )
+                    }
                     </Button>
                 </DialogActions>
             </Dialog >
