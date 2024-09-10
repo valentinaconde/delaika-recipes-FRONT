@@ -33,7 +33,7 @@ export default function SidebarAdmin() {
             Categorias
           </Link>
         </li>
-        <li className='pb-2 hover:bg-slate-50' key={2}>
+        <li className='pb-2 hover:bg-slate-50' key={3}>
           <Link href={ROUTES.recipesAdmin} className={`text-sm ${(pathName == ROUTES.recipesAdmin ? style.active : "")}`}>
             Recetas
           </Link>
@@ -65,7 +65,7 @@ export default function SidebarAdmin() {
                     Categorias
                   </Link>
                 </li>
-                <li className='pb-2 hover:bg-slate-50' key={2}>
+                <li className='pb-2 hover:bg-slate-50' key={3}>
                   <Link href={ROUTES.recipesAdmin} className={`text-sm ${(pathName == ROUTES.recipesAdmin ? style.active : "")}`}>
                     Recetas
                   </Link>
