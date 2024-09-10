@@ -19,10 +19,38 @@ export default function CategoriesProvider({children}: {children: React.ReactNod
         setCategories([...categories, category])
         localStorage.setItem('categories', JSON.stringify([...categories, category]))
     }
+
+    const handleDeleteCategory = (id: number) => {
+        const newCategories = categories.filter(category => category.id !== id)
+        setCategories(newCategories)
+        localStorage.setItem('categories', JSON.stringify(newCategories))
+    }
+
+    const handleHideCategory = (id: number) => {
+        const newCategories = categories.map(category => {
+            if(category.id === id) {
+                category.hide = !category.hide
+            }
+            return category
+        })
+        setCategories(newCategories)
+        localStorage.setItem('categories', JSON.stringify(newCategories))
+    }
+
+    const handleEditCategory = (id: number, name: string) => {
+        const newCategories = categories.map(category => {
+            if(category.id === id) {
+                category.name = name
+            }
+            return category
+        })
+        setCategories(newCategories)
+        localStorage.setItem('categories', JSON.stringify(newCategories))
+    }
     
 
     return (
-        <CategoriesContext.Provider value={{ categories, handleSetCategories, handleAddCategory }}>{children}</CategoriesContext.Provider>
+        <CategoriesContext.Provider value={{ categories, handleSetCategories, handleAddCategory, handleDeleteCategory, handleHideCategory, handleEditCategory  }}>{children}</CategoriesContext.Provider>
     )
 
 }
