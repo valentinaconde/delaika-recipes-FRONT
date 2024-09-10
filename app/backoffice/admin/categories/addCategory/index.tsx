@@ -16,7 +16,7 @@ export default function AddCategory() {
 
     const handleSubmit = (category: Category) => {
         const lastAddedCategory = categories[categories.length - 1];
-        category.id = lastAddedCategory.id + 1;
+        if(lastAddedCategory) category.id = lastAddedCategory.id + 1;
         handleAddCategory(category)
         
     }
@@ -25,8 +25,9 @@ export default function AddCategory() {
         <div className="flex flex-col">
             <Formik
                 initialValues={initialValues}
-                onSubmit={(values) => {
+                onSubmit={(values, {resetForm}) => {
                     handleSubmit(values)
+                    resetForm()
                 }}
             >
                 <Form className='flex flex-col items-center mt-2 px-8 py-5 border-2 rounded-md'>
