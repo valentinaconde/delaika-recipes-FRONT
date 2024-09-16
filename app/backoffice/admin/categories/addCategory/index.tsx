@@ -35,7 +35,7 @@ export default function AddCategory() {
                     <div className='h-20 '>
                         <Field id="name" name="name" placeholder="Nombre" className={`w-96 self-center p-2 border rounded-md`} />
                     </div>
-                    <button type="submit" className="w-96 bg-neutral-200 p-2 mt-3 rounded-md">Guardar</button>
+                    <button type="submit" name='guardar' className="w-96 bg-neutral-200 p-2 mt-3 rounded-md">Guardar</button>
                 </Form>
             </Formik>
         </div>

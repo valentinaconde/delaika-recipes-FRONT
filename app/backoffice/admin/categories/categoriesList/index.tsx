@@ -19,7 +19,7 @@ export default function Categories() {
     }, [])
     
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col" data-testid="categories-list">
             {
                 categories?.map(category => (
                     <div key={category.id} className="border border-solid h-8 flex items-center justify-between px-2 my-2 w-96">
