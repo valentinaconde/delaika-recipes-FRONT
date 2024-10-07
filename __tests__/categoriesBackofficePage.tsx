@@ -6,14 +6,16 @@ import userEvent from '@testing-library/user-event'
 import CategoriesProvider from '@/app/context/CategoriesProvider';
 
 
-beforeEach(() => {
-    render(
-        <CategoriesProvider>
-            <Categories />
-        </CategoriesProvider>
-    )
-})
+
 describe('Categories Backoffice Page', () => {
+    beforeEach(() => {
+        render(
+            <CategoriesProvider>
+                <Categories />
+            </CategoriesProvider>
+        )
+    })
+    
     it('renders categories backoffice page', () => {
         const getStarted = screen.getByText("Administracion de categorías");
         expect(getStarted).toBeInTheDocument();
