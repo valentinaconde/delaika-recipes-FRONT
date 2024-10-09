@@ -13,12 +13,12 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import { Category } from '@/app/interfaces/categories';
 
 import { CategoriesContext } from '@/app/context/CategoriesContext';
-
+import { useCategories } from '@/app/hooks/useCategories';
 
 export default function ConfirmModal({ category, action }: { category: Category, action: string }) {
     const [open, setOpen] = useState(false);
     const [modalText, setModalText] = useState('')
-    const { handleDeleteCategory, handleHideCategory } = useContext(CategoriesContext)
+    const { handleDeleteCategory, handleHideCategory } = useCategories()
 
     const handleClickOpen = () => {
         handleSetModalText()
