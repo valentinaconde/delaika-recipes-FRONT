@@ -1,188 +1,260 @@
 {
     "recipes": [
         {
-        "id": 1,
-        "name": "Torta de vainilla",
-        "categoryId": 1,
-        "imageUrl": "https://media.istockphoto.com/id/1394514086/es/foto/cierre-un-trozo-de-pastel-de-fruta-de-naranja-h%C3%BAmedo-en-el-plato-con-rodajas-de-naranja-en-la.jpg?s=2048x2048&w=is&k=20&c=Nft3ckyAR0hrnxVlWj2paA1D1BaY3ZD9iggOI0odjyk=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Huevos",
-            "quantity": "2"
-            },
-            {
-            "name": "Azucar",
-            "quantity": "100 gr"
-            }
-        ]
+            "id": 1,
+            "name": "Torta de vainilla",
+            "categoryId": 1,
+            "imageUrl": "https://media.istockphoto.com/id/1394514086/es/foto/cierre-un-trozo-de-pastel-de-fruta-de-naranja-h%C3%BAmedo-en-el-plato-con-rodajas-de-naranja-en-la.jpg?s=2048x2048&w=is&k=20&c=Nft3ckyAR0hrnxVlWj2paA1D1BaY3ZD9iggOI0odjyk=",
+            "ingredients": [
+                {
+                    "name": "Huevos",
+                    "quantity": "2"
+                },
+                {
+                    "name": "Azucar",
+                    "quantity": "100 gr"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 1,
+                    "recipeId": 1,
+                    "info": "Batir los huevos con el azúcar hasta obtener una mezcla esponjosa."
+                },
+                {
+                    "id": 2,
+                    "recipeId": 1,
+                    "info": "Verter la mezcla en un molde y hornear a 180°C durante 30 minutos."
+                }
+            ]
         },
         {
-        "id": 2,
-        "name": "Torta de chocolate",
-        "categoryId": 1,
-        "imageUrl": "https://media.istockphoto.com/id/1370520449/es/foto/rebanada-de-pastel-de-chocolate-con-glaseado.jpg?s=2048x2048&w=is&k=20&c=crNdgTpK9wqWjURvjqBq3wSyXFlWPxs5Np8FcPSwLPM=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Chocolate",
-            "quantity": "100gr"
-            },
-            {
-            "name": "Huevos",
-            "quantity": "2"
-            }
-        ]
+            "id": 2,
+            "name": "Torta de chocolate",
+            "categoryId": 1,
+            "imageUrl": "https://media.istockphoto.com/id/1370520449/es/foto/rebanada-de-pastel-de-chocolate-con-glaseado.jpg?s=2048x2048&w=is&k=20&c=crNdgTpK9wqWjURvjqBq3wSyXFlWPxs5Np8FcPSwLPM=",
+            "ingredients": [
+                {
+                    "name": "Chocolate",
+                    "quantity": "100gr"
+                },
+                {
+                    "name": "Huevos",
+                    "quantity": "2"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 3,
+                    "recipeId": 2,
+                    "info": "Derretir el chocolate a baño María."
+                },
+                {
+                    "id": 4,
+                    "recipeId": 2,
+                    "info": "Mezclar el chocolate con los huevos batidos y hornear a 180°C por 25 minutos."
+                }
+            ]
         },
         {
-        "id": 3,
-        "name": "Torta de limon",
-        "categoryId": 1,
-        "imageUrl": "https://media.istockphoto.com/id/178413678/es/foto/pastel-de-lim%C3%B3n.jpg?s=2048x2048&w=is&k=20&c=ffLhU2nl5fZEtbKDUpBfqs4hEvjnt2IuPC4C-1dfENw=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Limones",
-            "quantity": "3"
-            },
-            {
-            "name": "Leche",
-            "quantity": "100ml"
-            }
-        ]
+            "id": 3,
+            "name": "Torta de limon",
+            "categoryId": 1,
+            "imageUrl": "https://media.istockphoto.com/id/178413678/es/foto/pastel-de-lim%C3%B3n.jpg?s=2048x2048&w=is&k=20&c=ffLhU2nl5fZEtbKDUpBfqs4hEvjnt2IuPC4C-1dfENw=",
+            "ingredients": [
+                {
+                    "name": "Limones",
+                    "quantity": "3"
+                },
+                {
+                    "name": "Leche",
+                    "quantity": "100ml"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 5,
+                    "recipeId": 3,
+                    "info": "Exprimir los limones y mezclar el jugo con la leche."
+                },
+                {
+                    "id": 6,
+                    "recipeId": 3,
+                    "info": "Hornear la mezcla a 180°C durante 35 minutos."
+                }
+            ]
         },
         {
-        "id": 4,
-        "name": "Guacamole",
-        "categoryId": 2,
-        "imageUrl": "https://media.istockphoto.com/id/529669952/es/foto/guacamole-dip.jpg?s=2048x2048&w=is&k=20&c=zkp1vxIq3X6U66gG4pRRQ5nHdNzjiLbtgga5uwp7E8w=",
-        "description":"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Palta",
-            "quantity": "1"
-            },
-            {
-            "name": "Tomate picado",
-            "quantity": "1/2"
-            }
-        ]
+            "id": 4,
+            "name": "Guacamole",
+            "categoryId": 2,
+            "imageUrl": "https://media.istockphoto.com/id/529669952/es/foto/guacamole-dip.jpg?s=2048x2048&w=is&k=20&c=zkp1vxIq3X6U66gG4pRRQ5nHdNzjiLbtgga5uwp7E8w=",
+            "ingredients": [
+                {
+                    "name": "Palta",
+                    "quantity": "1"
+                },
+                {
+                    "name": "Tomate picado",
+                    "quantity": "1/2"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 7,
+                    "recipeId": 4,
+                    "info": "Aplastar la palta y mezclarla con el tomate."
+                },
+                {
+                    "id": 8,
+                    "recipeId": 4,
+                    "info": "Agregar sal y jugo de limón al gusto."
+                }
+            ]
         },
         {
-        "id": 5,
-        "name": "Sushi",
-        "categoryId": 3,
-        "imageUrl": "https://media.istockphoto.com/id/1320922361/es/foto/mujer-tomando-sabroso-rollo-de-sushi-con-salm%C3%B3n-de-la-mesa-primer-plano.jpg?s=2048x2048&w=is&k=20&c=rsIn2mDJkDDXNNW2qJKRCY5_PHVRLNiaa3DOe_pPMkA=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Arroz",
-            "quantity": "100gr"
-            },
-            {
-            "name": "Salmón",
-            "quantity": "200gr"
-            }
-        ]
+            "id": 5,
+            "name": "Sushi",
+            "categoryId": 3,
+            "imageUrl": "https://media.istockphoto.com/id/1320922361/es/foto/mujer-tomando-sabroso-rollo-de-sushi-con-salm%C3%B3n-de-la-mesa-primer-plano.jpg?s=2048x2048&w=is&k=20&c=rsIn2mDJkDDXNNW2qJKRCY5_PHVRLNiaa3DOe_pPMkA=",
+            "ingredients": [
+                {
+                    "name": "Arroz",
+                    "quantity": "100gr"
+                },
+                {
+                    "name": "Salmón",
+                    "quantity": "200gr"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 9,
+                    "recipeId": 5,
+                    "info": "Cocinar el arroz y dejar enfriar."
+                },
+                {
+                    "id": 10,
+                    "recipeId": 5,
+                    "info": "Enrollar el arroz con el salmón en hojas de alga nori."
+                }
+            ]
         },
         {
-        "id": 6,
-        "name": "Tacos",
-        "categoryId": 3,
-        "imageUrl": "https://media.istockphoto.com/id/1430849921/es/foto/orden-de-tacos-closeup.jpg?s=2048x2048&w=is&k=20&c=cgB-U03RAFlDHyijzkhy9DYPjuc6pab-10Xgm_Bq0U4=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Masa de tacos",
-            "quantity": "4"
-            },
-            {
-            "name": "Carne",
-            "quantity": "200gr"
-            }
-        ]
+            "id": 6,
+            "name": "Tacos",
+            "categoryId": 3,
+            "imageUrl": "https://media.istockphoto.com/id/1430849921/es/foto/orden-de-tacos-closeup.jpg?s=2048x2048&w=is&k=20&c=cgB-U03RAFlDHyijzkhy9DYPjuc6pab-10Xgm_Bq0U4=",
+            "ingredients": [
+                {
+                    "name": "Masa de tacos",
+                    "quantity": "4"
+                },
+                {
+                    "name": "Carne",
+                    "quantity": "200gr"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 11,
+                    "recipeId": 6,
+                    "info": "Cocinar la carne y sazonar al gusto."
+                },
+                {
+                    "id": 12,
+                    "recipeId": 6,
+                    "info": "Servir la carne en las tortillas de taco y agregar guarniciones al gusto."
+                }
+            ]
         },
         {
-        "id": 7,
-        "name": "Ensalada",
-        "categoryId": 3,
-        "imageUrl": "https://media.istockphoto.com/id/1349067702/es/foto/ensalada-griega-con-aderezo-de-vinagreta-cubierto-con-pollo-a-la-parrilla.jpg?s=2048x2048&w=is&k=20&c=H1-t9rXimi38ELhM9qGtFKG_aGygSpWJovg2Sh6JUtk=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Lechuga",
-            "quantity": "100gr"
-            },
-            {
-            "name": "Tomate",
-            "quantity": "2"
-            }
-        ]
+            "id": 7,
+            "name": "Ensalada",
+            "categoryId": 3,
+            "imageUrl": "https://media.istockphoto.com/id/1349067702/es/foto/ensalada-griega-con-aderezo-de-vinagreta-cubierto-con-pollo-a-la-parrilla.jpg?s=2048x2048&w=is&k=20&c=H1-t9rXimi38ELhM9qGtFKG_aGygSpWJovg2Sh6JUtk=",
+            "ingredients": [
+                {
+                    "name": "Lechuga",
+                    "quantity": "100gr"
+                },
+                {
+                    "name": "Tomate",
+                    "quantity": "2"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 13,
+                    "recipeId": 7,
+                    "info": "Cortar la lechuga y los tomates."
+                },
+                {
+                    "id": 14,
+                    "recipeId": 7,
+                    "info": "Mezclar todo y aliñar con aceite de oliva y sal."
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Flan",
+            "categoryId": 4,
+            "imageUrl": "https://media.istockphoto.com/id/533893588/es/foto/porci%C3%B3n-de-pud%C3%ADn-de-leche.jpg?s=2048x2048&w=is&k=20&c=eQ4aTWJOrKfIR2Qg2edCJhi0hswGo6v6qXDtC_zZl7o=",
+            "ingredients": [
+                {
+                    "name": "Huevos",
+                    "quantity": "5"
+                },
+                {
+                    "name": "Leche",
+                    "quantity": "500ml"
+                },
+                {
+                    "name": "Azucar",
+                    "quantity": "200gr"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 15,
+                    "recipeId": 8,
+                    "info": "Mezclar los huevos con la leche y el azúcar."
+                },
+                {
+                    "id": 16,
+                    "recipeId": 8,
+                    "info": "Cocinar a baño María hasta que el flan cuaje."
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Helado",
+            "categoryId": 4,
+            "imageUrl": "https://media.istockphoto.com/id/531916743/es/foto/cono-de-helado-de-vainilla.jpg?s=2048x2048&w=is&k=20&c=RJ-6AsKLcrYc8DBTRViGft8C64NcTiTB57ExRv8PveE=",
+            "ingredients": [
+                {
+                    "name": "Leche",
+                    "quantity": "300ml"
+                },
+                {
+                    "name": "Azúcar",
+                    "quantity": "100gr"
+                }
+            ],
+            "steps": [
+                {
+                    "id": 17,
+                    "recipeId": 9,
+                    "info": "Mezclar la leche con el azúcar y congelar."
+                },
+                {
+                    "id": 18,
+                    "recipeId": 9,
+                    "info": "Batir cada 30 minutos para evitar que se cristalice."
+                }
+            ]
         }
-        ,
-        {
-        "id": 8,
-        "name": "Flan",
-        "categoryId": 4,
-        "imageUrl": "https://media.istockphoto.com/id/533893588/es/foto/porci%C3%B3n-de-pud%C3%ADn-de-leche.jpg?s=2048x2048&w=is&k=20&c=eQ4aTWJOrKfIR2Qg2edCJhi0hswGo6v6qXDtC_zZl7o=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Huevos",
-            "quantity": "5"
-            },
-            {
-            "name": "Leche",
-            "quantity": "500ml"
-            },
-            {
-            "name": "Azucar",
-            "quantity": "200gr"
-            }
-        ]
-        }
-        ,
-        {
-        "id": 9,
-        "name": "Helado",
-        "categoryId": 4,
-        "imageUrl": "https://media.istockphoto.com/id/1326143969/es/foto/bol-con-bolas-de-helado-de-vainilla.jpg?s=2048x2048&w=is&k=20&c=nR0T4hbWfHghsb19Oz5GmITY51oSOUxnjUnWBlNq6zs=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Leche",
-            "quantity": "300ml"
-            },
-            {
-            "name": "Azucar",
-            "quantity": "200gr"
-            }
-        ]
-        }
-        ,
-        {
-        "id": 10,
-        "name": "Postre de chocolate",
-        "categoryId": 4,
-        "imageUrl": "https://media.istockphoto.com/id/1081939744/es/foto/macetas-de-mousse-de-chocolate-casera.jpg?s=2048x2048&w=is&k=20&c=UVGbiM7f5OkW1dS0paUgZwCYBlz6KLxxIUR6ls3Pn8I=",
-        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem eos at inventore numquam animi officia dolore pariatur quaerat vel autem.",
-        "ingredients": [
-            {
-            "name": "Chocolate en barra",
-            "quantity": "200gr"
-            },
-            {
-            "name": "Leche",
-            "quantity": "200ml"
-            }
-        ]
-        }
-
-
-
-
-
-    
-
     ]
 }
