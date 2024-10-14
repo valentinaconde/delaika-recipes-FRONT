@@ -1,13 +1,18 @@
-export interface Recipes {
+import { Ingredient, RecipeIngredient } from "./ingredient";
+
+export interface Recipe {
     id: number;
     name: string;
     categoryId: number;
     imageUrl: string;
-    description: string;
-    ingredients: Ingredient[];
+    ingredients: RecipeIngredient[];
+    steps: Step[]
 }
 
-export interface Ingredient {
-    name: string;
-    quantity: string;
+
+export interface Step {
+    id: number;
+    recipeId: number;
+    info: string;
 }
+
