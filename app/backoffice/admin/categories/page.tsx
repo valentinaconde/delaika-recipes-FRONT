@@ -1,8 +1,4 @@
 'use client'
-import { useContext, useEffect, useState } from "react"
-import cat from '../../../mocks/data/categories.json'
-import { Category } from "../../../interfaces/categories"
-
 import AddCategory from './addCategory'
 import CategoriesList from './categoriesList'
 
