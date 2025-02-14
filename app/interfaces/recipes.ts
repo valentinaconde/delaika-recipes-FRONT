@@ -1,11 +1,11 @@
-import { Ingredient, RecipeIngredient } from "./ingredient";
+import { Ingredient } from "./ingredient";
 
 export interface Recipe {
     id: number;
     name: string;
     categoryId: number;
     imageUrl: string;
-    ingredients: RecipeIngredient[];
+    ingredients: Ingredient[];
     steps: Step[]
 }
 
