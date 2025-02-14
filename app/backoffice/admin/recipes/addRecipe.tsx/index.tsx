@@ -31,7 +31,6 @@ export default function AddRecipe() {
     const [newIngredientQuantity, setNewIngredientQuantity] = useState<string>('');
 
     const [newInfo, setNewInfo] = useState<string>('');
-    const [imageUrl, setImageUrl] = useState<string>('');
   
     const initialValues: Recipe = {
         id: 0,
@@ -42,10 +41,10 @@ export default function AddRecipe() {
         steps: []
     }
 
-    const handleSubmit = (recipe: any) => {
+    const handleSubmit = (recipe: Recipe) => {
         recipe.ingredients = ingredients;
         recipe.steps = steps
-        recipe.imageUrl = imageUrl
+        recipe.categoryId = Number(recipe.categoryId)
         addRecipe(recipe)
     }
 
@@ -76,7 +75,7 @@ export default function AddRecipe() {
         setIngredients([])
         setSteps([])
         setRecipeId(recipes.length + 1)
-        handleSetCategories(categories)
+        handleSetCategories()
     }, [])
 
 
@@ -98,8 +97,8 @@ export default function AddRecipe() {
                         <Field id="imageUrl" name="imageUrl" placeholder="URL de imagen" className={`w-96 self-center p-2 border rounded-md`} />
                     </div>
                     <div className='h-20'>
-                        <Field as="select" id="categoryId" name="categoryId" className={`w-96 self-center p-2 border rounded-md`}>
-                            <option value="" label="Seleccionar categoría" />
+                        <Field type="number" as="select" id="categoryId" name="categoryId" className={`w-96 self-center p-2 border rounded-md`}>
+                            <option value="id" label="Seleccionar categoría" />
                             {categories.map((category: Category) => (
                                 <option key={category.id} value={category.id} label={category.name} />
                             ))}
