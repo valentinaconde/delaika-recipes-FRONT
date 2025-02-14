@@ -6,6 +6,7 @@ import { useContext, useEffect, useState } from "react"
 import EditModal from '../editModal'
 import ConfirmModal from '../confirmModal'
 import { CategoriesContext } from "@/app/context/CategoriesContext"
+import { Category } from "@/app/interfaces/categories"
 
 
 
@@ -14,10 +15,11 @@ export default function Categories() {
 
     const { categories, handleSetCategories} = useContext(CategoriesContext)
 
-    useEffect(() => {
-        handleSetCategories(categories)
-    }, [])
     
+      useEffect(() => {
+        handleSetCategories()
+        }, []);
+
     return (
         <div className="flex flex-col">
             {
