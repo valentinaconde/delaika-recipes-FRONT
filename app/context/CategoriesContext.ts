@@ -3,7 +3,7 @@ import { Category } from "../interfaces/categories";
 
 interface CategoriesContextProps {
     categories: Category[];
-    handleSetCategories: (categories: Category[]) => void;
+    handleSetCategories: () => void;
     handleAddCategory: (category: Category) => void;
     handleDeleteCategory: (id: number) => void;
     handleHideCategory: (id: number) => void;
