@@ -5,21 +5,20 @@ import {
     Form,
     Field,
 } from 'formik';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 
 export default function AddCategory() {
 
-    const {handleAddCategory, categories} = useContext(CategoriesContext)
+    const {handleAddCategory} = useContext(CategoriesContext)
 
     const initialValues: Category = { id:0, name: '', hide: false };
 
-    const handleSubmit = (category: Category) => {
-        const lastAddedCategory = categories[categories.length - 1];
-        if(lastAddedCategory) category.id = lastAddedCategory.id + 1;
-        handleAddCategory(category)
-        
-    }
+    const handleSubmit = async (category: Category) => {
+        await handleAddCategory(category)
+    };
+
+  
 
     return (
         <div className="flex flex-col">
